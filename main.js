@@ -24,8 +24,6 @@ function autoPlay(){
 function playGame(playerMove){
     const computerMove = pickComputerMove()
     let result = ''
-    
-
     if(playerMove === 'rock'){
         if(computerMove === 'rock'){
             result = 'tie!';
