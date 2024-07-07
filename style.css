@@ -5,7 +5,13 @@ button{
 
 }
 
-.auto,.reset{
- background-color: aquamarine;
+.auto{
+ background-color: rgb(12, 211, 145);
+ color: white;
 
+}
+
+.reset{
+    background-color: brown;
+    color: white;
 }

@@ -2,6 +2,9 @@
     const score = 
         JSON.parse(localStorage.getItem('score'))
 
+
+
+
 let isautoPlaying = false
 let intervalId
 function autoPlay(){
