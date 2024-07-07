@@ -2,12 +2,22 @@
     const score = 
         JSON.parse(localStorage.getItem('score'))
 
-    
+let isautoPlaying = false
+let intervalId
 function autoPlay(){
-  setInterval(function() {
-        const playerMove = pickComputerMove()
-        playGame(playerMove)
-    },3000)
+        if(!isautoPlaying){
+
+        intervalId =  setInterval(function() {
+                const playerMove = pickComputerMove()
+                playGame(playerMove)
+            },1000)
+            document.querySelector('.auto').innerHTML = "AutoPlaying..."
+            isautoPlaying = true
+        }else{
+    clearInterval(intervalId)
+    document.querySelector('.auto').innerHTML = "AutoPlay"
+    isautoPlaying= false}
+    
 }
 
 
