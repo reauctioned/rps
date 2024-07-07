@@ -3,6 +3,13 @@
         JSON.parse(localStorage.getItem('score'))
 
     
+function autoPlay(){
+  setInterval(function() {
+        const playerMove = pickComputerMove()
+        playGame(playerMove)
+    },3000)
+}
+
 
 function playGame(playerMove){
     const computerMove = pickComputerMove()
@@ -60,14 +67,14 @@ localStorage.setItem('score', JSON.stringify(score));
 function pickComputerMove() {
     const randomNumber = Math.random();
 
-    let computerMove = '';
+    let computerMove = ''
 
     if (randomNumber >= 0 && randomNumber < 1 / 3) {
-      computerMove = 'rock';
+      computerMove = 'rock'
     } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
-      computerMove = 'paper';
+      computerMove = 'paper'
     } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
-      computerMove = 'scissors';
+      computerMove = 'scissors'
     }
 
     return computerMove;

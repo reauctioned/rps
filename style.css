@@ -4,3 +4,8 @@ button{
     border-radius: 0.2rem;
 
 }
+
+.auto,.reset{
+ background-color: aquamarine;
+
+}
