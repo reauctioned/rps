@@ -27,6 +27,19 @@ document.querySelector('.paperButton').addEventListener('click',() => {playGame(
 document.querySelector('.scissorButton').addEventListener('click',() => {playGame('scissors')} )
 document.querySelector('.reset').addEventListener('click',() => {playGame('reset')} )
 document.querySelector('.auto').addEventListener('click',() => {autoPlay()} )
+document.body.addEventListener('keydown',(event) => {
+    if(event.key === 'r')
+    {playGame('rock')}
+    else if (event.key == 'p')
+    {playGame('paper')}
+    else if (event.key === 's')
+    {playGame('scissors')}
+    else if(event.key === 'Escape')
+    {playGame('reset')}
+    else if(event.key === 'Control')
+    {autoPlay()}
+
+})
 
 
 function playGame(playerMove) {
